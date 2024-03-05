@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ProductForm.css";
 
-const ProductForm = () => {
+const ProductForm = (props) => {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
   const [imageUrl, setImageUrl] = useState("");
@@ -26,7 +26,10 @@ const ProductForm = () => {
       productPrice,
       imageUrl,
     };
-    console.log(newProductData);
+     //props.setProducts((prevState)=> [...prevState,newProductData])
+     props.onSaveProduct(newProductData)
+
+    
     setProductName("")
     setProductPrice("")
     setImageUrl("")
