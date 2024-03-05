@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Counter.css"
 
-const Counter = () => {
-  
-  const [counter, setCounter] = useState(0);
+const Counter = ({product}) => {
+  const {productPrice} = product
+  const [counter, setCounter] = useState(productPrice);
   
 
   return (
