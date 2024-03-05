@@ -1,9 +1,10 @@
 import React from "react";
 
 import "./ProductItem.css";
+import Counter from "./Counter";
 
-const ProductItem = ({product}) => {
-  const {imageUrl, productName, productPrice } = product;
+const ProductItem = ({ product }) => {
+  const { imageUrl, productName} = product;
 
   return (
     <div className="product-item">
@@ -12,7 +13,9 @@ const ProductItem = ({product}) => {
       </div>
       <div className="product-info">{productName}</div>
       <div className="price">
-        <span>{productPrice}₺</span>
+        <span>
+          <Counter product={product}/>
+        </span>
       </div>
       <button>Güncelle</button>
     </div>
