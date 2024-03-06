@@ -9,7 +9,7 @@ const Products = () => {
 
   return (
     <div className="product-wrapper">
-      <NewProduct setProducts={setProducts} />
+      <NewProduct setProducts={setProducts} products={products} />
       <h1>Products</h1>
 
       <div className="products">
