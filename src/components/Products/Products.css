@@ -1,14 +1,15 @@
-.products-wrapper{
-    padding: 40px;
-    
-    
+.product-wrapper {
+  padding: 10px;
 }
 
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-    text-align: start;
-    
-}   
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  text-align: start;
+  margin-top: 30px;
+}
 
+.product-wrapper h1 {
+    margin-top: 15px;
+  }
