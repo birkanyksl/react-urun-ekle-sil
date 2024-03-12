@@ -61,19 +61,22 @@ const ProductForm = (props) => {
         <label>Ürün Görseli</label>
         <input
           type="text"
-          placeholder="Ürün görseli giriniz."
+          placeholder="Ürün görsel adresi giriniz."
           onChange={imageChangeHandler}
           value={imageUrl}
         />
       </div>
-      <button className="product-form-button">Ürün Ekle</button>
-      <button
-        className="product-form-button cancel"
-        type="button"
-        onClick={() => props.setIsOpen(false)}
-      >
-        Vazgeç
-      </button>
+
+      <div className="form-buttons">
+        <button className="product-form-button">Ürün Ekle</button>
+        <button
+          className="product-form-button cancel"
+          type="button"
+          onClick={() => props.setIsOpen(false)}
+        >
+          Vazgeç
+        </button>
+      </div>
     </form>
   );
 };

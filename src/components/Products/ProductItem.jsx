@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import "./ProductItem.css";
 import Counter from "./Counter";
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, products, setProducts }) => {
   const { imageUrl, productName } = product;
   const [title, setTitle] = useState(productName);
 
   const clickHandler = () => {
     setTitle("Güncellendi");
+  };
+
+  const deleteHandler = () => {
+    setProducts(products.filter((item) => item.id !== product.id));
   };
 
   return (
@@ -22,6 +26,9 @@ const ProductItem = ({ product }) => {
         </span>
       </div>
       <button onClick={clickHandler}>Güncelle</button>
+      <button onClick={deleteHandler} className="btn-delete">
+        Sil
+      </button>
     </div>
   );
 };

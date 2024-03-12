@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "./Counter.css"
+import "./Counter.css";
 
-const Counter = ({product}) => {
-  const {productPrice} = product
-  const [counter, setCounter] = useState(productPrice);
-  
+const Counter = ({ product }) => {
+  const { productPrice } = product;
+  const [counter, setCounter] = useState(Number(productPrice));
 
   return (
     <div className="counterDiv">
