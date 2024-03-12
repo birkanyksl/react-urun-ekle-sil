@@ -22,19 +22,17 @@ const ProductForm = (props) => {
     event.preventDefault();
 
     const newProductData = {
-      id: props.products.length +1,
+      id: props.products.length + 1,
       productName,
       productPrice,
       imageUrl,
     };
-     //props.setProducts((prevState)=> [...prevState,newProductData])
-     props.onSaveProduct(newProductData)
+    //props.setProducts((prevState)=> [...prevState,newProductData])
+    props.onSaveProduct(newProductData);
 
-    
-    setProductName("")
-    setProductPrice("")
-    setImageUrl("")
-
+    setProductName("");
+    setProductPrice("");
+    setImageUrl("");
   };
 
   return (
@@ -69,6 +67,13 @@ const ProductForm = (props) => {
         />
       </div>
       <button className="product-form-button">Ürün Ekle</button>
+      <button
+        className="product-form-button cancel"
+        type="button"
+        onClick={() => props.setIsOpen(false)}
+      >
+        Vazgeç
+      </button>
     </form>
   );
 };
